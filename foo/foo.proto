@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package foo;
+import "bar/bar.proto";
+
+message Interval { bar.Bar bar = 1; }
+
+service FooService {
+  rpc SendInterval(Interval) returns (bar.Bar) {}
+}
