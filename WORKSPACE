@@ -1,3 +1,4 @@
+workspace(name = "cc_grpc_library_demo")
 load(
     "@bazel_tools//tools/build_defs/repo:git.bzl",
     "git_repository",
@@ -97,18 +98,3 @@ grpc_deps()
 
 grpc_extra_deps()
 
-git_repository(
-    name = "org_tensorflow",
-    remote = "https://github.com/xiedeacc/tensorflow.git",
-    tag = "v2.4.1.1",
-)
-
-load(
-    "@org_tensorflow//tensorflow:workspace.bzl",
-    "tf_workspace",
-)
-
-tf_workspace(
-    path_prefix = "",
-    tf_repo_name = "org_tensorflow",
-)
