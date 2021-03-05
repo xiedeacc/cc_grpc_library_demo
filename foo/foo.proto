@@ -3,8 +3,12 @@ syntax = "proto3";
 package foo;
 import "bar/bar.proto";
 
-message Interval { bar.Bar bar = 1; }
+message Foo { 
+    bar.Bar bar = 1; 
+    int64 request_id = 2;
+    string msg = 3;
+}
 
 service FooService {
-  rpc SendInterval(Interval) returns (bar.Bar) {}
+  rpc SendInterval(Foo) returns (bar.Bar) {}
 }

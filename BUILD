@@ -1,3 +1,4 @@
+workspace(name = "cc_grpc_library_demo")
 load("@com_github_grpc_grpc//bazel:cc_grpc_library.bzl", "cc_grpc_library")
 
 filegroup(
